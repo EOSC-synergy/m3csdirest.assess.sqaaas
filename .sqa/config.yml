@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.11
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/stevenjgibbons/m3csdirest:
+      branch: main
+      repo: https://github.com/stevenjgibbons/m3csdirest
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/stevenjgibbons/m3csdirest git:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-cerise-warthog.sh
+        container: qc.acc_bumpy-cyan-oyster
+  QC.Doc:
+    repos:
+      github.com/stevenjgibbons/m3csdirest find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-platinum-buzzard.sh
+        container: qc.doc_zippy-ultramarine-setter
+      github.com/stevenjgibbons/m3csdirest git:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-heliotrope-dormouse.sh
+        container: qc.doc_fuzzy-olivine-wrasse
+      github.com/stevenjgibbons/m3csdirest markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-amethyst-spoonbill.sh
+        container: qc.doc_sleepy-orange-eleuth
+  QC.Lic:
+    repos:
+      github.com/stevenjgibbons/m3csdirest licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-green-zonkey.sh
+        container: qc.lic_baggy-azure-sparrow
+  QC.Met:
+    repos:
+      github.com/stevenjgibbons/m3csdirest cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-fuchsia-balinese.sh
+        container: qc.met_thirsty-crimson-scorpion
+  QC.Sec:
+    repos:
+      github.com/stevenjgibbons/m3csdirest bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-magenta-chicken.sh
+        container: qc.sec_lousy-mustard-dachshund
+  QC.Sty:
+    repos:
+      github.com/stevenjgibbons/m3csdirest flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-firebrick-monster.sh
+        container: qc.sty_gummy-cornflower-grasshopper
+  QC.Ver:
+    repos:
+      github.com/stevenjgibbons/m3csdirest get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-heliotrope-bracke.sh
+        container: qc.ver_shabby-amaranth-chimpanzee
+timeout: 5400
