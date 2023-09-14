@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/stevenjgibbons/m3csdirest git:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-khaki-dane.sh
-        container: qc.acc_bluesy-brown-mouse
+        - /usr/bin/env sh .sqa/script.nippy-cerulean-walrus.sh
+        container: qc.acc_boozy-lilac-squirrel
   QC.Doc:
     repos:
       github.com/stevenjgibbons/m3csdirest find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-goldenrod-worm.sh
-        container: qc.doc_paltry-pumpkin-harrier
+        - /usr/bin/env sh .sqa/script.scummy-silver-impala.sh
+        container: qc.doc_lousy-harlequin-bobcat
       github.com/stevenjgibbons/m3csdirest git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-cobalt-urchin.sh
-        container: qc.doc_shaggy-lime-wrasse
+        - /usr/bin/env sh .sqa/script.fuzzy-beige-donkey.sh
+        container: qc.doc_smelly-flax-termite
       github.com/stevenjgibbons/m3csdirest markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-orange-scorpion.sh
-        container: qc.doc_randy-persimmon-labradoodle
+        - /usr/bin/env sh .sqa/script.stinky-ochre-seahorse.sh
+        container: qc.doc_pokey-maroon-crocodile
   QC.Lic:
     repos:
       github.com/stevenjgibbons/m3csdirest licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-dandelion-badger.sh
-        container: qc.lic_flabby-rose-badger
+        - /usr/bin/env sh .sqa/script.bluesy-cyan-newt.sh
+        container: qc.lic_stuffy-bistre-wombat
   QC.Met:
     repos:
       github.com/stevenjgibbons/m3csdirest cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-cinnamon-rat.sh
-        container: qc.met_shabby-mustard-hornet
+        - /usr/bin/env sh .sqa/script.woolly-plum-civet.sh
+        container: qc.met_silly-persimmon-cuscus
   QC.Sec:
     repos:
       github.com/stevenjgibbons/m3csdirest bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-wheat-owl.sh
-        container: qc.sec_messy-cerise-setter
+        - /usr/bin/env sh .sqa/script.cranky-silver-toad.sh
+        container: qc.sec_snoopy-indigo-hippopotamus
   QC.Sty:
     repos:
       github.com/stevenjgibbons/m3csdirest flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-crimson-dragonfly.sh
-        container: qc.sty_sunny-razzmatazz-iguana
+        - /usr/bin/env sh .sqa/script.skanky-xanthic-opossum.sh
+        container: qc.sty_scummy-olive-serval
   QC.Ver:
     repos:
       github.com/stevenjgibbons/m3csdirest get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-chestnut-cougar.sh
-        container: qc.ver_greasy-carmine-emu
+        - /usr/bin/env sh .sqa/script.homey-salmon-mayfly.sh
+        container: qc.ver_shabby-lemon-liger
 timeout: 5400
